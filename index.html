@@ -12,7 +12,8 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            background-attachment: fixed;
             color: #e0e0e0;
             overflow-x: hidden;
             line-height: 1.6;
@@ -25,20 +26,33 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             overflow: hidden;
         }
         .hero::before {
             content: '';
             position: absolute;
+            top: -50%; left: -50%; right: -50%; bottom: -50%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0,212,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(123,44,191,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 40% 40%, rgba(0,212,255,0.05) 0%, transparent 30%);
+            animation: slowFloat 25s ease-in-out infinite alternate;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ffffff10"/></svg>');
-            background-size: 50px 50px;
-            animation: moveBackground 20s linear infinite;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1.5" fill="%23ffffff08"/></svg>');
+            background-size: 60px 60px;
+            animation: moveBackground 30s linear infinite;
+        }
+        @keyframes slowFloat {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(5%, 5%) rotate(2deg); }
         }
         @keyframes moveBackground {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50px); }
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(-30px) translateX(30px); }
         }
         .hero-content {
             z-index: 10;
@@ -72,6 +86,7 @@
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;
+            z-index: 10;
         }
         @keyframes bounce {
             0%,100% { transform: translateX(-50%) translateY(0); }
@@ -88,6 +103,7 @@
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
         }
 
         /* About */
@@ -104,6 +120,10 @@
             margin: 0 auto 2rem;
             text-align: center;
         }
+        .cta-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
@@ -112,8 +132,8 @@
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
-            margin-top: 1rem;
             transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,212,255,0.2);
         }
         .cta-button:hover {
             transform: translateY(-3px);
@@ -138,11 +158,12 @@
             border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
         .skill-card:hover {
             transform: translateY(-5px);
             border-color: #00d4ff;
+            box-shadow: 0 8px 25px rgba(0,212,255,0.15);
         }
         .skill-card h3 {
             font-size: 1.1rem;
@@ -215,10 +236,6 @@
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-        .timeline-item .date {
-            color: #888;
-            font-size: 0.9rem;
-        }
         .timeline-item p {
             color: #c0c0c0;
             margin-top: 0.5rem;
@@ -289,7 +306,9 @@
             für digitale Projekte. Mit einem starken analytischen Hintergrund und fundierten Kenntnissen in
             Projektmanagement bringe ich komplexe Anforderungen in saubere, benutzerfreundliche Lösungen.
         </p>
-        <a href="#contact" class="cta-button">Projekt anfragen</a>
+        <div class="cta-container">
+            <a href="#contact" class="cta-button">Projekt anfragen</a>
+        </div>
     </section>
 
     <!-- Skills -->
@@ -338,25 +357,21 @@
             <div class="timeline-item">
                 <h3>Senior Manager Strategic Investment</h3>
                 <div class="company">Weischer.Cinema GmbH</div>
-                <div class="date">01/2026 – 03/2026</div>
                 <p>Optimierung von Konditionenstrategien, Verhandlung mit Investment-Units, Controlling von Vereinbarungen und Budgets, Marktanalysen und KPI-Implementierung.</p>
             </div>
             <div class="timeline-item">
                 <h3>Senior Deal & Inventory Manager (Investment)</h3>
                 <div class="company">Publicis Media GmbH</div>
-                <div class="date">10/2022 – 12/2025</div>
                 <p>Budget- und Vertragsmanagement für nationale und internationale Kunden, Datenanalyse für Pricing-Optimierung, Verhandlungsführung, interne Prozessoptimierung und Projektmanagement.</p>
             </div>
             <div class="timeline-item">
                 <h3>Client Campaign Manager</h3>
                 <div class="company">RMS Radio Marketing Services GmbH & Co. KG</div>
-                <div class="date">01/2020 – 09/2022</div>
                 <p>Kampagnenmanagement im Radiobereich, Account-Betreuung, Projektleitung für Salesforce-Implementierung im Campaign Management.</p>
             </div>
             <div class="timeline-item">
                 <h3>Mediadisponent / Ausbildung</h3>
                 <div class="company">Weischer.Media</div>
-                <div class="date">06/2017 – 07/2017 & 08/2015 – 07/2017</div>
                 <p>Disposition Kinowerbung Schweiz, kaufmännische Ausbildung mit Schwerpunkt Medienkommunikation.</p>
             </div>
         </div>
@@ -373,7 +388,9 @@
                 ✉️ <a href="mailto:jonathan.kokalj@gmail.com">jonathan.kokalj@gmail.com</a>
             </p>
         </div>
-        <a href="mailto:jonathan.kokalj@gmail.com" class="cta-button">Nachricht schreiben</a>
+        <div class="cta-container">
+            <a href="mailto:jonathan.kokalj@gmail.com" class="cta-button">Nachricht schreiben</a>
+        </div>
     </section>
 
     <footer>
@@ -394,9 +411,9 @@
         // Subtle parallax on hero background
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero::before');
+            const hero = document.querySelector('.hero');
             if (hero) {
-                document.querySelector('.hero').style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+                hero.style.backgroundPositionY = -(scrolled * 0.3) + 'px';
             }
         });
 
