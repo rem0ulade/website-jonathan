@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan F. Kokalj – Freiberuflicher App & Softwareentwickler</title>
+    <title>Jonathan F. Kokalj – Freelance App & Software Developer</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -25,7 +25,6 @@
             min-height: 100vh;
         }
 
-        /* Animated gradient background */
         .bg-gradient {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background:
@@ -40,13 +39,11 @@
             100% { transform: scale(1.1) rotate(2deg); }
         }
 
-        /* Floating particles canvas */
         #particles {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; pointer-events: none;
         }
 
-        /* Navigation */
         nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             display: flex; justify-content: space-between; align-items: center;
@@ -78,7 +75,6 @@
             background: rgba(0,212,255,0.2); color: var(--primary);
         }
 
-        /* Section styles */
         section {
             padding: 6rem 2rem;
             max-width: 1200px;
@@ -86,7 +82,6 @@
             position: relative;
         }
 
-        /* Hero */
         .hero {
             height: 100vh;
             display: flex;
@@ -138,7 +133,6 @@
             filter: drop-shadow(0 0 12px rgba(0,212,255,0.4));
         }
 
-        /* About */
         .about h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
@@ -169,7 +163,6 @@
             box-shadow: 0 10px 35px rgba(0,212,255,0.4);
         }
 
-        /* Skills */
         .skills h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
@@ -206,7 +199,6 @@
             color: var(--muted);
         }
 
-        /* Experience timeline */
         .experience h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
@@ -262,7 +254,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Contact */
         .contact {
             text-align: center;
             padding: 6rem 2rem;
@@ -317,7 +308,6 @@
             opacity: 0.6;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
@@ -342,52 +332,47 @@
     </style>
 </head>
 <body>
-    <!-- Background effects -->
     <div class="bg-gradient"></div>
     <canvas id="particles"></canvas>
 
-    <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">J. Kokalj</a>
         <div class="nav-links">
-            <a href="#about">Über mich</a>
+            <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#experience">Erfahrung</a>
-            <a href="#contact">Kontakt</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
             <div class="lang-switch">
-                <a href="index.html" class="active">DE</a>
-                <a href="index_en.html">EN</a>
+                <a href="index.html">DE</a>
+                <a href="index_en.html" class="active">EN</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <h1>Jonathan F. Kokalj</h1>
-            <p>Freiberuflicher App & Softwareentwickler</p>
-            <div class="subtitle">+ Beratung</div>
+            <p>Freelance App & Software Developer</p>
+            <div class="subtitle">+ Consulting</div>
         </div>
         <div class="scroll-indicator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
         </div>
     </section>
 
-    <!-- About -->
     <section class="about fade-on-scroll" id="about">
-        <h2>Über mich</h2>
+        <h2>About Me</h2>
         <p>
-            Ich bin ein leidenschaftlicher Softwareentwickler mit über 10 Jahren Erfahrung in der digitalen Branche.
-            Meine Expertise umfasst die Konzeption und Entwicklung von Apps sowie strategische Beratung
-            für digitale Projekte. Mit einem starken analytischen Hintergrund und fundierten Kenntnissen in
-            Projektmanagement bringe ich komplexe Anforderungen in saubere, benutzerfreundliche Lösungen.
+            I am a passionate software developer with over 10 years of experience in the digital industry.
+            My expertise includes the conception and development of apps as well as strategic consulting
+            for digital projects. With a strong analytical background and solid knowledge in project management,
+            I turn complex requirements into clean, user-friendly solutions.
         </p>
         <div class="cta-container">
-            <a href="#contact" class="cta-button">Projekt anfragen</a>
+            <a href="#contact" class="cta-button">Request a project</a>
         </div>
     </section>
 
-    <!-- Skills -->
     <section class="skills fade-on-scroll" id="skills">
         <h2>Skills & Tools</h2>
         <div class="skills-grid">
@@ -413,22 +398,22 @@
             </div>
             <div class="skill-card">
                 <h3>Python</h3>
-                <p>Skripting & Automatisierung</p>
+                <p>Scripting & Automation</p>
             </div>
             <div class="skill-card">
                 <h3>Salesforce / Jira</h3>
-                <p>Projekt- & Kundenmanagement</p>
+                <p>Project & Client Management</p>
             </div>
             <div class="skill-card">
                 <h3>PowerBI / Tableau</h3>
-                <p>Datenanalyse & Reporting</p>
+                <p>Data Analysis & Reporting</p>
             </div>
             <div class="skill-card">
-                <h3>KI & LLM Integration</h3>
-                <p>OpenAI, Claude, lokale Modelle</p>
+                <h3>AI & LLM Integration</h3>
+                <p>OpenAI, Claude, local models</p>
             </div>
             <div class="skill-card">
-                <h3>Automatisierung</h3>
+                <h3>Automation</h3>
                 <p>n8n, Make, Workflows</p>
             </div>
             <div class="skill-card">
@@ -442,68 +427,65 @@
         </div>
     </section>
 
-    <!-- Experience -->
     <section class="experience fade-on-scroll" id="experience">
-        <h2>Berufserfahrung</h2>
+        <h2>Work Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <h3>Senior Manager Strategic Investment</h3>
                 <div class="company">Weischer.Cinema GmbH</div>
-                <p>Optimierung von Konditionenstrategien, Verhandlung mit Investment-Units, Controlling von Vereinbarungen und Budgets, Marktanalysen und KPI-Implementierung.</p>
+                <p>Optimization of condition strategies, negotiation with investment units, controlling of agreements and budgets, market analysis and KPI implementation.</p>
             </div>
             <div class="timeline-item">
                 <h3>Senior Deal & Inventory Manager (Investment)</h3>
                 <div class="company">Publicis Media GmbH</div>
-                <p>Budget- und Vertragsmanagement für nationale und internationale Kunden, Datenanalyse für Pricing-Optimierung, Verhandlungsführung, interne Prozessoptimierung und Projektmanagement.</p>
+                <p>Budget and contract management for national and international clients, data analysis for pricing optimization, negotiation leadership, internal process optimization and project management.</p>
             </div>
             <div class="timeline-item">
                 <h3>Client Campaign Manager</h3>
                 <div class="company">RMS Radio Marketing Services GmbH & Co. KG</div>
-                <p>Kampagnenmanagement im Radiobereich, Account-Betreuung, Projektleitung für Salesforce-Implementierung im Campaign Management.</p>
+                <p>Campaign management in radio, account care, project lead for Salesforce implementation in campaign management.</p>
             </div>
             <div class="timeline-item">
-                <h3>Mediadisponent / Ausbildung</h3>
+                <h3>Media Dispatcher / Apprenticeship</h3>
                 <div class="company">Weischer.Media</div>
-                <p>Disposition Kinowerbung Schweiz, kaufmännische Ausbildung mit Schwerpunkt Medienkommunikation.</p>
+                <p>Disposition of cinema advertising in the Swiss market, commercial apprenticeship with focus on media communication.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section class="contact fade-on-scroll" id="contact">
-        <h2>Kontakt</h2>
+        <h2>Contact</h2>
         <div class="contact-info">
             <p>Jonathan F. Kokalj</p>
-            <p>Moorkampshöhe 5, 25462 Rellingen</p>
+            <p>Moorkampshöhe 5, 25462 Rellingen, Germany</p>
             <p>
                 📞 <a href="tel:+4917661583811">+49 176 615 838 11</a><br>
                 ✉️ <a href="mailto:jonathan.kokalj@gmail.com">jonathan.kokalj@gmail.com</a>
             </p>
         </div>
         <div class="cta-container">
-            <a href="mailto:jonathan.kokalj@gmail.com" class="cta-button">Nachricht schreiben</a>
+            <a href="mailto:jonathan.kokalj@gmail.com" class="cta-button">Send message</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 Jonathan F. Kokalj – Freiberuflicher App & Softwareentwickler</p>
+            <p>© 2026 Jonathan F. Kokalj – Freelance App & Software Developer</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-                <a href="agb.html">AGB</a>
+                <a href="impressum.html">Imprint</a>
+                <a href="datenschutz.html">Privacy</a>
+                <a href="agb.html">Terms</a>
                 <span style="color: rgba(255,255,255,0.1);">|</span>
-                <a href="index_en.html">English</a>
+                <a href="index_en.html">DE</a>
             </div>
             <div class="footer-bottom">
-                Standort: Rellingen, Deutschland
+                Location: Rellingen, Germany
             </div>
         </div>
     </footer>
 
     <script>
-        // Particle animation
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -547,7 +529,6 @@
             canvas.height = window.innerHeight;
         });
 
-        // Scroll fade-in
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
