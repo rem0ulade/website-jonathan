@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan F. Kokalj – Freiberuflicher App & Softwareentwickler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Parallax Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ffffff10"/></svg>');
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+        @keyframes moveBackground {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50px); }
+        }
+        .hero-content {
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            fill: #00d4ff;
+        }
+
+        /* Section base */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About */
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1.1rem;
+            color: #c0c0c0;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+        }
+
+        /* Skills grid */
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00d4ff;
+            text-align: center;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+        }
+        .skill-card h3 {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Experience timeline */
+        .experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00d4ff;
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d4ff, #7b2cbf);
+        }
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 50%;
+            padding: 0 2rem;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            background: #00d4ff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00d4ff;
+        }
+        .timeline-item:nth-child(odd)::before {
+            right: -8px;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: -8px;
+        }
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+        .timeline-item .company {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-item .date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .timeline-item p {
+            color: #c0c0c0;
+            margin-top: 0.5rem;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent, rgba(0,212,255,0.05));
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            color: #c0c0c0;
+            margin-bottom: 2rem;
+        }
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 50px; text-align: left !important; }
+            .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { left: 0; text-align: left; }
+            .timeline-item:nth-child(odd)::before, .timeline-item:nth-child(even)::before { left: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jonathan F. Kokalj</h1>
+            <p>Freiberuflicher App & Softwareentwickler</p>
+            <p style="color: #7b2cbf; font-size: 1rem; margin-top: 0.5rem;">+ Beratung</p>
+        </div>
+        <div class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <h2>Über mich</h2>
+        <p>
+            Ich bin ein leidenschaftlicher Softwareentwickler mit über 8 Jahren Erfahrung in der digitalen Branche.
+            Meine Expertise umfasst die Konzeption und Entwicklung von Apps sowie strategische Beratung
+            für digitale Projekte. Mit einem starken analytischen Hintergrund und fundierten Kenntnissen in
+            Projektmanagement bringe ich komplexe Anforderungen in saubere, benutzerfreundliche Lösungen.
+        </p>
+        <a href="#contact" class="cta-button">Projekt anfragen</a>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <h2>Skills & Tools</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>React Native</h3>
+                <p>Mobile Apps</p>
+            </div>
+            <div class="skill-card">
+                <h3>TypeScript / JavaScript</h3>
+                <p>App & Web Entwicklung</p>
+            </div>
+            <div class="skill-card">
+                <h3>Supabase</h3>
+                <p>Backend & Datenbanken</p>
+            </div>
+            <div class="skill-card">
+                <h3>Expo / EAS</h3>
+                <p>Build & Deployment</p>
+            </div>
+            <div class="skill-card">
+                <h3>Zustand</h3>
+                <p>State Management</p>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Skripting & Automatisierung</p>
+            </div>
+            <div class="skill-card">
+                <h3>Salesforce / Jira</h3>
+                <p>Projekt- & Kundenmanagement</p>
+            </div>
+            <div class="skill-card">
+                <h3>PowerBI / Tableau</h3>
+                <p>Datenanalyse & Reporting</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience">
+        <h2>Berufserfahrung</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Senior Manager Strategic Investment</h3>
+                <div class="company">Weischer.Cinema GmbH</div>
+                <div class="date">01/2026 – 03/2026</div>
+                <p>Optimierung von Konditionenstrategien, Verhandlung mit Investment-Units, Controlling von Vereinbarungen und Budgets, Marktanalysen und KPI-Implementierung.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Senior Deal & Inventory Manager (Investment)</h3>
+                <div class="company">Publicis Media GmbH</div>
+                <div class="date">10/2022 – 12/2025</div>
+                <p>Budget- und Vertragsmanagement für nationale und internationale Kunden, Datenanalyse für Pricing-Optimierung, Verhandlungsführung, interne Prozessoptimierung und Projektmanagement.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Client Campaign Manager</h3>
+                <div class="company">RMS Radio Marketing Services GmbH & Co. KG</div>
+                <div class="date">01/2020 – 09/2022</div>
+                <p>Kampagnenmanagement im Radiobereich, Account-Betreuung, Projektleitung für Salesforce-Implementierung im Campaign Management.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Mediadisponent / Ausbildung</h3>
+                <div class="company">Weischer.Media</div>
+                <div class="date">06/2017 – 07/2017 & 08/2015 – 07/2017</div>
+                <p>Disposition Kinowerbung Schweiz, kaufmännische Ausbildung mit Schwerpunkt Medienkommunikation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Jonathan F. Kokalj</p>
+            <p>Moorkampshöhe 5, 25462 Rellingen</p>
+            <p>
+                📞 <a href="tel:+4917661583811">+49 176 615 838 11</a><br>
+                ✉️ <a href="mailto:jonathan.kokalj@gmail.com">jonathan.kokalj@gmail.com</a>
+            </p>
+        </div>
+        <a href="mailto:jonathan.kokalj@gmail.com" class="cta-button">Nachricht schreiben</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Jonathan F. Kokalj – Freiberuflicher App & Softwareentwickler</p>
+    </footer>
+
+    <script>
+        // Smooth scroll für Anchor-Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Subtle parallax on hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero::before');
+            if (hero) {
+                document.querySelector('.hero').style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+            }
+        });
+
+        // Fade-in animation for sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(sec => {
+            sec.style.opacity = '0';
+            sec.style.transform = 'translateY(30px)';
+            sec.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(sec);
+        });
+    </script>
+</body>
+</html>
