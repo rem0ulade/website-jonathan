@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz – Jonathan F. Kokalj</title>
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --accent: #ff6b2b;
+            --bg: #0a0a0f;
+            --bg2: #0f0f1a;
+            --text: #f0f0f5;
+            --muted: #888;
+            --grad: linear-gradient(135deg, #00d4ff, #ff6b2b);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(10,10,15,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo {
+            font-size: 1.3rem; font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 2rem; font-size: 0.78rem; }
+        .nav-links a {
+            color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;
+            text-decoration: none; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        main {
+            max-width: 760px; margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        .page-tag {
+            font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--accent); margin-bottom: 0.75rem;
+        }
+        h1 {
+            font-size: 2.5rem; font-weight: 900; margin-bottom: 2rem;
+            background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background: var(--bg2);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1rem; font-weight: 700; color: var(--primary);
+            text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;
+        }
+        p { color: #ccc; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        ul { color: #ccc; font-size: 0.95rem; padding-left: 1.5rem; margin-bottom: 0.75rem; }
+        li { margin-bottom: 0.3rem; }
+        a { color: var(--primary); }
+        footer {
+            text-align: center; padding: 2rem; font-size: 0.8rem;
+            color: rgba(255,255,255,0.2);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="logo">J. Kokalj</a>
+    <div class="nav-links">
+        <a href="index.html">Zurück</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+    </div>
+</nav>
+<main>
+    <div class="page-tag">Rechtliches</div>
+    <h1>Datenschutzerklärung</h1>
+
+    <div class="card">
+        <h2>1. Verantwortlicher</h2>
+        <p>Jonathan F. Kokalj</p>
+        <p>Freiberuflicher App & Softwareentwickler</p>
+        <p>Moorkampshöhe 5, 25462 Rellingen</p>
+        <p>E-Mail: <a href="mailto:jonathan.kokalj@gmail.com">jonathan.kokalj@gmail.com</a></p>
+    </div>
+
+    <div class="card">
+        <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+        <p>Wir erheben personenbezogene Daten nur, soweit dies für die Bereitstellung unserer Website und Dienste erforderlich ist. Beim Besuch dieser Website werden automatisch technische Zugriffsdaten (sog. Server-Logfiles) verarbeitet:</p>
+        <ul>
+            <li>IP-Adresse (anonymisiert)</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Aufgerufene URL</li>
+            <li>Browser und Betriebssystem</li>
+        </ul>
+        <p>Diese Daten dienen ausschließlich der technischen Bereitstellung der Website und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Kontaktaufnahme</h2>
+        <p>Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Daten (Name, E-Mail-Adresse, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert und verarbeitet. Eine Weitergabe an Dritte erfolgt nicht. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Cookies</h2>
+        <p>Diese Website verwendet keine Tracking-Cookies oder Drittanbieter-Cookies. Es werden ausschließlich technisch notwendige Einstellungen (z. B. Sprachpräferenz) lokal im Browser gespeichert (localStorage). Diese fallen nicht unter die Cookiepflicht gemäß DSGVO.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Keine Weitergabe an Dritte</h2>
+        <p>Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben oder Sie haben ausdrücklich eingewilligt.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Ihre Rechte</h2>
+        <p>Sie haben gemäß DSGVO folgende Rechte:</p>
+        <ul>
+            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+        </ul>
+        <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:jonathan.kokalj@gmail.com">jonathan.kokalj@gmail.com</a></p>
+    </div>
+
+    <div class="card">
+        <h2>7. Beschwerderecht</h2>
+        <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für Schleswig-Holstein ist das Unabhängige Landeszentrum für Datenschutz (ULD), <a href="https://www.datenschutzzentrum.de" target="_blank">www.datenschutzzentrum.de</a>.</p>
+    </div>
+
+    <div class="card">
+        <h2>8. Aktualität dieser Erklärung</h2>
+        <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand April 2026. Sie kann bei Änderungen unserer Website oder gesetzlichen Anforderungen angepasst werden.</p>
+    </div>
+</main>
+<footer>© 2026 Jonathan F. Kokalj – Freiberuflicher App & Softwareentwickler</footer>
+</body>
+</html>
