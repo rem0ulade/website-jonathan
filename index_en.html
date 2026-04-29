@@ -6,7 +6,6 @@
     <title>Jonathan F. Kokalj – Freelance App & Software Developer</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
             --primary: #00d4ff;
             --accent: #ff6b2b;
@@ -15,7 +14,6 @@
             --text: #f0f0f5;
             --muted: #888;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--bg-dark);
@@ -24,7 +22,6 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-
         .bg-gradient {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background:
@@ -38,12 +35,10 @@
             0% { transform: scale(1) rotate(0deg); }
             100% { transform: scale(1.1) rotate(2deg); }
         }
-
         #particles {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; pointer-events: none;
         }
-
         nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             display: flex; justify-content: space-between; align-items: center;
@@ -74,52 +69,31 @@
         .lang-switch a.active {
             background: rgba(0,212,255,0.2); color: var(--primary);
         }
-
         section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
+            padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; position: relative;
         }
-
         .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
         }
         .hero-content {
-            text-align: center;
-            z-index: 10;
-            animation: fadeInUp 1s ease-out;
+            text-align: center; z-index: 10; animation: fadeInUp 1s ease-out;
         }
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
+            font-size: 4rem; font-weight: 800;
             background: linear-gradient(90deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; margin-bottom: 0.5rem; letter-spacing: -0.02em;
         }
         .hero p {
-            font-size: 1.6rem;
-            color: var(--muted);
-            font-weight: 300;
+            font-size: 1.6rem; color: var(--muted); font-weight: 300;
         }
         .hero .subtitle {
-            font-size: 1rem;
-            color: var(--accent);
-            margin-top: 0.5rem;
-            font-weight: 600;
+            font-size: 1rem; color: var(--accent); margin-top: 0.5rem; font-weight: 600;
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .scroll-indicator {
             position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
             animation: bounce 2s infinite;
@@ -132,29 +106,17 @@
             width: 36px; height: 36px; fill: var(--primary);
             filter: drop-shadow(0 0 12px rgba(0,212,255,0.4));
         }
-
         .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            text-align: center;
+            font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary); text-align: center;
         }
         .about p {
-            font-size: 1.1rem;
-            color: #ccc;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            text-align: center;
+            font-size: 1.1rem; color: #ccc; max-width: 800px; margin: 0 auto 2rem; text-align: center;
         }
         .cta-container { text-align: center; margin-top: 2rem; }
         .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
+            display: inline-block; padding: 1rem 2.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--accent)); color: white;
+            text-decoration: none; border-radius: 30px; font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 20px rgba(0,212,255,0.25);
         }
@@ -162,25 +124,17 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 35px rgba(0,212,255,0.4);
         }
-
-        .skills h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            text-align: center;
+        .skills h2, .experience h2, .certificates h2 {
+            font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary); text-align: center;
         }
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;
         }
         .skill-card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 1.5rem;
-            text-align: center;
+            border-radius: 16px; padding: 1.5rem; text-align: center;
             transition: all 0.3s;
         }
         .skill-card:hover {
@@ -190,124 +144,75 @@
             background: rgba(15, 15, 26, 0.85);
         }
         .skill-card h3 {
-            font-size: 1.1rem;
-            color: var(--text);
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem; color: var(--text); margin-bottom: 0.5rem;
         }
         .skill-card p {
-            font-size: 0.9rem;
-            color: var(--muted);
+            font-size: 0.9rem; color: var(--muted);
         }
-
-        .experience h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            text-align: center;
-        }
+        .experience h2 { }
         .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+            position: relative; max-width: 800px; margin: 0 auto;
         }
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%; transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
+            content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+            width: 2px; height: 100%;
             background: linear-gradient(180deg, var(--primary), var(--accent));
             box-shadow: 0 0 15px rgba(0,212,255,0.3);
         }
         .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
-            width: 50%;
-            padding: 0 2rem;
+            margin-bottom: 3rem; position: relative; width: 50%; padding: 0 2rem;
         }
         .timeline-item:nth-child(odd) { left: 0; text-align: right; }
         .timeline-item:nth-child(even) { left: 50%; text-align: left; }
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            width: 18px; height: 18px;
-            background: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0,212,255,0.6);
-            border: 2px solid var(--bg-dark);
+            content: ''; position: absolute; top: 20px;
+            width: 18px; height: 18px; background: var(--primary); border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0,212,255,0.6); border: 2px solid var(--bg-dark);
         }
         .timeline-item:nth-child(odd)::before { right: -9px; }
         .timeline-item:nth-child(even)::before { left: -9px; }
         .timeline-item h3 {
-            font-size: 1.3rem;
-            color: var(--text);
-            margin-bottom: 0.3rem;
+            font-size: 1.3rem; color: var(--text); margin-bottom: 0.3rem;
         }
         .timeline-item .company {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; display: block;
         }
         .timeline-item p {
-            color: #ccc;
-            margin-top: 0.5rem;
+            color: #ccc; margin-top: 0.5rem;
         }
-
         .contact {
-            text-align: center;
-            padding: 6rem 2rem;
+            text-align: center; padding: 6rem 2rem;
             background: radial-gradient(ellipse at center, rgba(0,212,255,0.06) 0%, transparent 60%);
         }
         .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
+            font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary);
         }
         .contact-info {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 2rem;
+            font-size: 1.2rem; color: #ccc; margin-bottom: 2rem;
         }
         .contact-info a {
-            color: var(--primary);
-            text-decoration: none;
+            color: var(--primary); text-decoration: none;
         }
         .contact-info a:hover {
             text-decoration: underline;
         }
-
         footer {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            color: var(--muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            margin-top: 4rem;
+            text-align: center; padding: 2.5rem 2rem; color: var(--muted); font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.06); margin-top: 4rem;
         }
         .footer-content {
             max-width: 1200px; margin: 0 auto;
         }
         .footer-links {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            font-size: 0.8rem;
+            margin-top: 1rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-size: 0.8rem;
         }
         .footer-links a {
-            color: var(--muted);
-            text-decoration: none;
-            transition: color 0.3s;
+            color: var(--muted); text-decoration: none; transition: color 0.3s;
         }
         .footer-links a:hover { color: var(--primary); }
         .footer-bottom {
-            margin-top: 1.5rem;
-            font-size: 0.75rem;
-            opacity: 0.6;
+            margin-top: 1.5rem; font-size: 0.75rem; opacity: 0.6;
         }
-
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
@@ -319,9 +224,7 @@
             .timeline-item:nth-child(odd)::before, .timeline-item:nth-child(even)::before { left: 12px; }
             .footer-links { gap: 1rem; }
         }
-
         html { scroll-behavior: smooth; }
-
         .fade-on-scroll {
             opacity: 0; transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -332,15 +235,18 @@
     </style>
 </head>
 <body>
+    <!-- Background effects -->
     <div class="bg-gradient"></div>
     <canvas id="particles"></canvas>
 
+    <!-- Navigation -->
     <nav>
-        <a href="index.html" class="logo">J. Kokalj</a>
+        <a href="index_en.html" class="logo">J. Kokalj</a>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
+            <a href="#certificates">Certificates</a>
             <a href="#contact">Contact</a>
             <div class="lang-switch">
                 <a href="index.html">DE</a>
@@ -349,7 +255,7 @@
         </div>
     </nav>
 
-    <section class="hero">
+<section class="hero">
         <div class="hero-content">
             <h1>Jonathan F. Kokalj</h1>
             <p>Freelance App & Software Developer</p>
@@ -359,8 +265,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
         </div>
     </section>
-
-    <section class="about fade-on-scroll" id="about">
+<section class="about fade-on-scroll" id="about">
         <h2>About Me</h2>
         <p>
             I am a passionate software developer with over 10 years of experience in the digital industry.
@@ -372,8 +277,7 @@
             <a href="#contact" class="cta-button">Request a project</a>
         </div>
     </section>
-
-    <section class="skills fade-on-scroll" id="skills">
+<section class="skills fade-on-scroll" id="skills">
         <h2>Skills & Tools</h2>
         <div class="skills-grid">
             <div class="skill-card">
@@ -426,8 +330,6 @@
             </div>
         </div>
     </section>
-    <!-- Certificates -->
-    
 <section class="experience fade-on-scroll" id="experience">
         <h2>Work Experience</h2>
         <div class="timeline">
@@ -458,7 +360,8 @@
             </div>
         </div>
     </section>
-    <!-- Certificates as cards -->
+
+    <!-- Certificates -->
     <section class="certificates fade-on-scroll" id="certificates">
         <h2>Certificates & Education</h2>
         <div class="skills-grid">
@@ -484,6 +387,7 @@
             </div>
         </div>
     </section>
+
 <section class="contact fade-on-scroll" id="contact">
         <h2>Contact</h2>
         <div class="contact-info">
@@ -499,16 +403,17 @@
         </div>
     </section>
 
+
     <footer>
         <div class="footer-content">
             <p>© 2026 Jonathan F. Kokalj – Freelance App & Software Developer</p>
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="impressum.html">Imprint</a>
-                <a href="datenschutz.html">Privacy</a>
-                <a href="agb.html">Terms</a>
+                <a href="index_en.html">Home</a>
+                <a href="impressum_en.html">Imprint</a>
+                <a href="datenschutz_en.html">Privacy</a>
+                <a href="agb_en.html">Terms</a>
                 <span style="color: rgba(255,255,255,0.1);">|</span>
-                <a href="index_en.html">DE</a>
+                <a href="index.html">DE</a>
             </div>
             <div class="footer-bottom">
                 Location: Rellingen, Germany
